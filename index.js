@@ -36,7 +36,7 @@ const onShowBtnHandler = () => {
         repoElem.textContent = name;
         return repoElem;
       });
-      repoListElem.replaceChildren(...reposElems);
+      repoListElem.append(...reposElems);
     })
     .then(() => {
       showSpinner(false);
