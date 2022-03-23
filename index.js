@@ -13,9 +13,11 @@ const userAvatarElem = document.querySelector('.user__avatar');
 userAvatarElem.src = 'https://avatars3.githubusercontent.com/u10001';
 
 const nameFormInputElem = document.querySelector('.name-form__input');
+const repoListElem = document.querySelector('.repo-list');
 
 const onShowBtnHandler = () => {
   showSpinner(true);
+  repoListElem.innerHTML = '';
 
   getUserData(nameFormInputElem.value)
     .then(userData => {
